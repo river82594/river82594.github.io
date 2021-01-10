@@ -1,0 +1,31 @@
+img {
+	width: 100%;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 70%;
+	margin-left: auto;
+	margin-right: auto;
+}
+ul li {
+	padding: 1rem;
+	background-color: #f9990a;
+	margin: .5rem 0;
+	display: inline-block;
+}
+ul {
+	padding-left: 0;
+}
+a {
+	color: #FFFFFF;
+	text-transform: uppercase;
+   	font-weight: bold;
+}
+footer {
+	margin-top: 2rem;
+	font-size: .75rem;
+	border-top: 1px solid #ccc;
+}
+.list2 li {
+	background-color: #4da6ff
+}
