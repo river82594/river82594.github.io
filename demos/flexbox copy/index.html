@@ -1,0 +1,211 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+	<meta charset="UTF-8">
+	<title>Flexbox Guide</title>
+  <link href="style.css" type="text/css" rel="stylesheet">
+</head>
+<body>
+	<h1>Flexbox</h1>
+	
+	<!--------------------display------------------>
+	<h2>display</h2>
+	<div class="cards">
+		<div>
+			<h2>Card 1</h2>
+			<p>These cards have been laid out using flexbox. By setting <code>display: flex;</code> on the parent, all direct children become flex items.</p>
+			<p>This card has some extra content in it, so all the other cards stretch to be the same height.</p>
+		</div>
+		<div>
+			<h2>Card 2</h2>
+			<p>These cards have been laid out using flexbox. By setting <code>display: flex;</code> on the parent, all direct children become flex items.</p>
+		</div>
+		 <div>
+			<h2>Card 3</h2>
+			<p>These cards have been laid out using flexbox. By setting <code>display: flex;</code> on the parent, all direct children become flex items.</p>
+		</div>   
+	</div>
+	
+	<hr>
+	
+	<!--------------------controlling sizing with flex properties------------------>
+	<h2>controlling sizing with flex properties</h2>
+	<p>The <code>flex-basis</code> property can be used to set a width (if <code>flex-direction</code> is <code>row</code>) or height (if <code>flex-direction</code> is <code>column</code>) for the flex item. If you give all items a <code>flex-basis</code> of 200 pixels, the browser will assign 200 pixels of space to each item.</p>
+	<p>The <code>flex-grow</code> property defines whether an item can grow larger than the size set in <code>flex-basis</code>. If you set <code>flex-grow</code> to <code>1</code>, you allow items to grow larger than 200 pixels in order to take up any free space in the flex container.</p>
+	<p>The <code>flex-shrink</code> property determines whether an item can shrink smaller than the <code>flex-basis</code> value. If you have a non-wrapping 500-pixel-width container and three items with a flex-basis of 200 pixels, they will overflow unless <code>flex-shrink</code> is greater than <code>0</code>.</p>
+  <p><code>flex: 0 0 200px;</code></p>
+	<div class="cards flex1">
+		<div>Item 1</div>
+		<div>Item 2</div>
+		<div>Item 3</div>          
+	</div>
+  <p><code>flex: 1 1 200px;</code></p>
+	<div class="cards flex2">
+		<div>Item 1</div>
+		<div>Item 2</div>
+		<div>Item 3</div>          
+	</div>
+  <p><code>flex: 1 1 200px;</code> / first-child <code>flex: 2 1 200px;</code></p>
+	<div class="cards flex3">
+		<div>Item 1</div>
+		<div>Item 2</div>
+		<div>Item 3</div>          
+	</div>
+	
+	<hr>
+	
+	<!--------------------wrapping flex items------------------>
+	<h2>wrapping flex items</h2>
+	<div class="cards wrap">
+		<div>
+			<h2>Card 1</h2>
+			<p>These cards have been laid out using flexbox. By setting <code>display: flex;</code> on the parent, all direct children become flex items.</p>
+			<p>This card has some extra content in it, so all the other cards stretch to be the same height.</p>
+		</div>
+		<div>
+			<h2>Card 2</h2>
+			<p>These cards have been laid out using flexbox. By setting <code>display: flex;</code> on the parent, all direct children become flex items.</p>
+		</div>
+		<div>
+			<h2>Card 3</h2>
+			<p>These cards have been laid out using flexbox. By setting <code>display: flex;</code> on the parent, all direct children become flex items.</p>
+		</div>
+		<div>
+			<h2>Card 4</h2>
+			<p>These cards have been laid out using flexbox. By setting <code>display: flex;</code> on the parent, all direct children become flex items.</p>
+		</div>
+		<div>
+			<h2>Card 5</h2>
+			<p>These cards have been laid out using flexbox. By setting <code>display: flex;</code> on the parent, all direct children become flex items.</p>
+		</div>
+		<div>
+			<h2>Card 6</h2>
+			<p>These cards have been laid out using flexbox. By setting <code>display: flex;</code> on the parent, all direct children become flex items.</p>
+		</div>
+	</div>
+	
+	<hr>
+	<!--------------------aligning flex items------------------>
+	<h2>aligning flex items</h2>
+  <div class="cards align1">
+		<div>
+			<h2>Card 1</h2>
+			<p>These cards show the default alignment for flex items.</p>
+			<p>This card has some extra content in it, so all the other cards stretch to be the same height.</p>
+		</div>
+		<div>
+			<h2>Card 2</h2>
+			<p>This is the default alignment.</p>
+		</div>
+		<div>
+			<h2>Card 3</h2>
+			<p>This is the default alignment.</p>
+		</div>
+	</div>
+  <p><code>align-items: flex-end;</code></p>
+	<div class="cards align2">
+		<div>
+			<h2>Card 1</h2>
+			<p>These cards are aligned to the bottom.</p>
+			<p>This card has some extra content in it making it taller. All the other flex items align with the bottom of the tallest item.</p>
+		</div>
+		<div>
+			<h2>Card 2</h2>
+			<p>These cards are aligned to the bottom.</p>
+		</div>
+		<div>
+			<h2>Card 3</h2>
+			<p>These cards are aligned to the bottom.</p>
+		</div>
+	</div>
+	<p><code>align-items: flex-start;</code></p>
+  <div class="cards align3">
+		<div>
+			<h2>Card 1</h2>
+			<p>These cards are aligned to the top.</p>
+			<p>This card has some extra content in it making it taller. All the other flex items align with the top of the tallest item.</p>
+		</div>
+		<div>
+			<h2>Card 2</h2>
+			<p>These cards are aligned to the top.</p>
+		</div>
+		<div>
+			<h2>Card 3</h2>
+			<p>These cards are aligned to the top.</p>
+		</div>
+	</div>
+  <p><code>align-items: center;</code></p>
+	<div class="cards align4">
+		<div>
+			<h2>Card 1</h2>
+			<p>These cards are aligned to the center.</p>
+			<p>This card has some extra content in it making it taller. All the flex items are centered along the main axis.</p>
+		</div>
+		<div>
+			<h2>Card 2</h2>
+			<p>These cards are aligned to the center.</p>
+		</div>
+		<div>
+			<h2>Card 3</h2>
+			<p>These cards are aligned to the center.</p>
+		</div>
+	</div>
+	
+	<hr>
+	
+	<!--------------------centering flex items------------------>
+	<h2>centering flex items</h2>
+  <p><code>align-items: center;</code> – vertical centering <br />
+    <code>justify-content: center;</code> – horizontal centering</p>
+	<div class="cards center">
+		<p>Thanks to the magic of Flexbox, we can now center items vertically!!!!</p>
+	</div>
+	
+	<hr>
+	
+	<!--------------------space around and between items------------------>
+	<h2>space around and between items</h2>
+	<p><code>justify-content: flex-start;</code> packs all items toward the start line. This is the default behavior, so no CSS is necessary to acheive this unless you are overriding some CSS that has already been created.</p>
+	<div class="cards space1">
+		<div>Item 1</div>
+		<div>Item 2</div>
+		<div>Item 3</div>
+		<div>Item 4</div>
+	</div>
+  <p><code>justify-content: flex-end;</code> packs all items toward the end line.</p>
+	<div class="cards space2">
+		<div>Item 1</div>
+		<div>Item 2</div>
+		<div>Item 3</div>
+		<div>Item 4</div>
+	</div>
+  <p><code>justify-content: center;</code> centers all items along the line.</p>
+	<div class="cards space3">
+		<div>Item 1</div>
+		<div>Item 2</div>
+		<div>Item 3</div>
+		<div>Item 4</div>
+	</div>
+  <p><code>justify-content: space-between;</code> creates an equal amount of space between our items. The left and right items go all the way to the end.</p>
+	<div class="cards space4">
+		<div>Item 1</div>
+		<div>Item 2</div>
+		<div>Item 3</div>
+		<div>Item 4</div>
+	</div>
+	<p><code>justify-content: space-around;</code> creates an equal amount of space around the items. The left and right items have space on both sides.</p>
+	<div class="cards space5">
+		<div>Item 1</div>
+		<div>Item 2</div>
+		<div>Item 3</div>
+		<div>Item 4</div>
+	</div>
+	<p><code>justify-content: space-evenly;</code> distributes the items evenly on the main axis.</p>
+	<div class="cards space6">
+		<div>Item 1</div>
+		<div>Item 2</div>
+		<div>Item 3</div>
+		<div>Item 4</div>
+	</div>
+</body>
+</html>
