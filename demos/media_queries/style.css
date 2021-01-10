@@ -1,0 +1,51 @@
+img {
+  width: 100%;
+}
+
+body {
+  background-color: #000;
+  color: #fff;
+}
+
+h1 {
+  font-size: 2.5rem;
+}
+
+/* Tablet */
+@media (min-width: 450px) {
+  
+  main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+  
+  section {
+    flex: 1 1 200px;
+    padding: 2%;
+  }
+
+  h1 {
+    font-size: 4rem;
+    text-align: center;
+  }
+
+  
+  
+}
+/*Desktop */
+@media (min-width: 800px) {
+
+  body {
+    background-color: #fff;
+    color: #000;
+  }
+  h1 {
+    color: red;
+  }
+  
+  p {
+    color: green;
+  }
+  
+}

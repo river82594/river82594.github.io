@@ -1,0 +1,63 @@
+
+.cards {
+  margin: 0 -10px;
+  padding: 0;
+  display: flex;
+}
+.cards div, .center {
+  background-color: #e5dbff;
+  border: 1px solid #d0bfff;
+  margin: 0 10px 20px 10px;
+  padding: 10px;
+  border-radius: 5px;
+}
+code {
+  color: red;
+}
+.flex1 div {
+  flex: 0 0 200px;
+}
+.flex2 div {
+  flex: 1 1 200px;
+}
+.flex3 div {
+  flex: 1 1 200px;
+}
+.flex3 div:first-child {
+  flex: 2 1 200px;
+}
+.wrap {
+  flex-wrap: wrap;
+}
+.wrap div {
+  flex: 1 1 200px;
+}
+.align2 {
+  align-items: flex-end;
+}
+.align4 {
+  align-items: center; 
+}
+.center {
+	justify-content: center;
+	align-items: center;
+    height: 300px;
+}
+.space1 {
+  justify-content: flex-start;
+}
+.space2 {
+  justify-content: flex-end;
+}
+.space3 {
+  justify-content: center;
+}
+.space4 {
+  justify-content: space-between;
+}
+.space5 {
+  justify-content: space-around;
+}
+.space6 {
+  justify-content: space-evenly;
+}

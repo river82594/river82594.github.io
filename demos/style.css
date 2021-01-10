@@ -1,0 +1,33 @@
+body {
+  background-color: #ebeae8;
+  width: 80%;
+  margin: 0 auto;
+}
+h1 {
+  background-color: #03cafc;
+  /*padding-top: 1rem;
+  padding-right: .5rem;
+  padding-bottom: 1rem;
+  padding-left: .5rem;*/
+  padding: 1rem;
+  border: .3rem solid #156e85;
+}
+h2 {
+  border-bottom: 2px dotted #156e85;
+  text-transform: uppercase;
+}
+div {
+  background-color: #fff;
+}
+h2, p {
+  margin: 1.5rem 2rem;
+}
+.callout {
+  color: #ad1010;
+}
+.quote {
+  font-style: italic;
+}
+div p {
+  color: gray;
+}

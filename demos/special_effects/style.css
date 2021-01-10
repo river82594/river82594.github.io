@@ -1,0 +1,33 @@
+.hero {
+	background-image: url(images/harpa_concert_hall.jpg);
+	text-align: center;
+	height: 100vh;
+	background-size: cover;
+}
+body {
+	margin: 0;
+}
+h1{
+	font-size: 5rem;
+	color: #FFF;
+	padding-top: 15rem;
+	margin: 0;
+	text-shadow: 3px 3px 4px #000;
+}
+.hero p{
+	font-size: 1.5rem;
+	background-color: green;
+	font-weight: bold;
+	padding: 1rem 0;
+	background: linear-gradient(90deg, #00C9FF 0%, #92FE9D 100%);
+}
+section {
+	width: 26%;
+	display: inline-block;
+	background: linear-gradient(170deg, #e3ffe7 71%, #d9e7ff 71%);
+	padding: 1%;
+	margin: 1%;
+	border: 5px solid black;
+	border-radius: 10px;
+	text-align:center;
+}
