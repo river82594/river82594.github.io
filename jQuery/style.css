@@ -1,0 +1,28 @@
+* {
+    box-sizing: border-box;
+}
+h1,h2,h3 {
+    text-align: center
+}
+
+div.programlinks {
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    flex-flow: row wrap;
+    border: solid black;
+}
+div.programlinks a {
+    margin: 1em; 
+    font-size: 1.2em;
+    border: solid blue;
+    padding: 2em;
+    border-width: 10px;
+}
+/* brk {
+    flex-basis: 100%; 
+    width: 0px; 
+    height: 0px; 
+    overflow: 
+    hidden;
+} */
