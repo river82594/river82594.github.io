@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Program 06</title>
+</head>
+
+    <header>
+		<h3 id="rand" class="logo">
+		 ITSE - 1394 Program 06
+		</h3>
+		
+		<nav class="header-nav">
+    
+			<ul>
+				<li><a id="getBig" href="#">*R7</a></li>
+				<li><a id="portfolio" href="#">Portfolio</a></li>
+				<li><a id="about" href="#">About</a></li>
+				<li><a id="contact" href="#">Contact</a></li>
+			</ul>
+		</nav>
+
+	</header>
+
+<body>
+<!-- R1 -->
+<div class="threeButtons">
+<p>Requirement 01 - Div elements disappear when clicked</p>
+<hr>
+<div id="redBut">
+    <button style="background-color: rgb(255, 0, 0);"></button>
+    Red hidden when clicked
+</div>
+
+<div id="greenBut">
+    <button style="background-color: green;">  </button>
+    Green hidden when clicked
+</div>
+
+<div id="blueBut">
+    <button style="background-color: blue;"></button>
+    Blue hidden when clicked
+</div>
+</div>
+<hr>
+<!-- R2 -->
+
+<div id="myTable">
+    <p>Requirement 02 - Colored Table using Jquery</p>
+    <button id="colorTable">Change Colors</button>
+    <br>
+    <br>
+<table>
+    <tr>
+        <td> 1 </td>
+    </tr>
+    <tr>
+        <td> 2 </td>
+    </tr>
+    <tr>
+        <td> 3 </td>
+    </tr>
+    <tr>
+        <td> 4 </td>
+    </tr>
+    <tr>
+        <td> 5 </td>
+    </tr>
+    <tr>
+        <td>  6 </td>
+    </tr>
+    <tr>
+        <td> 7 </td>
+    </tr>
+    <tr>
+        <td> 8 </td>
+    </tr>
+    <tr>
+        <td> 9 </td>
+    </tr>
+    <tr>
+        <td> 10 </td>
+    </tr>
+   
+</table>
+
+</div>
+<hr>
+
+<!-- R3 -->
+<div class="section3">
+<p>Requirement 03 - Change color of p elements with class colorChange using Jquery</p>
+<button id="pColor" onclick="changeColor()">Click me </button>
+<div class="colorChange">
+    <p>One</p>
+    <p>Two</p>
+    <p>Three</p>   
+</div>
+<p>Four</p>
+<p>Five</p>
+<p>Six</p>
+<p>Seven</p>
+</div>
+<hr>
+
+<!-- R4 -->
+<p>Requirement 04</p>
+<p>Click button below to change the image on all four buttons below</p>
+<button id="imageChange">Change Images</button>
+<br>
+<br>
+<br>
+
+<button class ="image"></button> 
+<button class ="image"></button> 
+<button class ="image"></button>
+<button class ="image"></button>
+
+
+<br>
+<hr>
+<!-- R5 -->
+<p>--Requirement 05--</p>
+<p>Click this button to change the font and font size of the first "p" tag</p>
+<button onclick="changeFirstParagraph()" id="changeFont"><strong>CLICK</strong></button>
+<br>
+<br>
+<br>
+<br>
+<hr>
+<!-- R6 -->
+<p>Requirement 06</p>
+<p>Click the text fields to see the background color of them change using jquery.</p>
+<p><input type="text"></p>
+<p><input type="text"></p>
+
+
+
+<script>
+    //R1
+    $(function(){
+        $("#redBut").click(function(){
+          $(this).hide();
+        });
+      });
+    $(function(){
+        $("#greenBut").click(function(){
+          $(this).hide();
+        });
+      });
+    $(function(){
+        $("#blueBut").click(function(){
+          $(this).hide();
+        });
+      });
+    
+    //R2
+    $(function(){
+    $("#colorTable").click(function(){
+        $("tr:nth-child(even)").css({backgroundColor: 'lightGrey'});
+        $("tr:nth-child(odd)").css({backgroundColor: 'pink' });
+    });
+});
+    
+    //R3
+   
+    function changeColor() {
+    $(function() {
+                $(".colorChange").css("color", "red");
+        });
+    }
+    
+    //R4
+    
+
+   $("#imageChange").click(function() {
+       if ($(".image").hasClass("red")){
+           $(".image").removeClass("red");
+       } else {
+           $(".image").addClass("red");
+       };
+    });
+            
+
+
+
+
+//        if ($(".image button").css({"backgroundImage":"url(https://cdn1.vectorstock.com/i/1000x1000/34/05/sad-face-icon-unhappy-face-symbol-vector-23383405.jpg)"})){
+//            $(".image button").css({"backgroundImage": "url(https://i.ytimg.com/vi/r3MMA3gjNys/hqdefault.jpg)"});
+//            console.log("clicked");
+//         } else {
+//            $(".image button").css({"backgroundImage":"url(https://cdn1.vectorstock.com/i/1000x1000/34/05/sad-face-icon-unhappy-face-symbol-vector-23383405.jpg)"});
+//            console.log("else");
+//    }});
+   
+
+    
+    
+    //R5
+    
+    function changeFirstParagraph() {
+        $(function() {
+            $("p").first().css({"font-size": "50px", "font-family": "Trebuchet MS"}); 
+        });
+    };
+    
+    
+    //R6
+    
+    $("input").focusin(function(){
+    $( this ).css("background-color", "#ffff19");
+    });
+        
+    $("input").focusout(function(){
+    $( this).css("background-color", "white");
+    });
+
+    //R7
+$(function() {
+    $("#rand, #getBig, #about, #contact, #portfolio").mouseenter(function(){
+    $(this).css({"font-size": "30px", "color":"blue"});
+    });
+    $("#rand, #getBig, #about, #contact, #portfolio").mouseleave(function(){
+        $(this).css({"font-size": "16px", "color": "black"});
+    });
+});
+    
+    </script>
+
+</body>
+</html>

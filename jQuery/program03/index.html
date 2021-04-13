@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Program03</title>
+	<link href="style.css" rel="stylesheet">
+	
+	<meta charset='utf-8'>
+
+</head>
+<body>
+
+	
+
+	<main>
+
+		<section class="hero">
+			<h1>ITSE 1394 - Jquery</h1>
+		</section>
+
+		<section class="recent-posts">
+
+			<h2>Program 03</h2>
+		
+			<div class="recent-posts-list">
+
+				<section class="recent-posts-item">
+
+					<h3>Requirement 01</h3>
+					
+					<p>Enter a temperature:</p>
+					
+					<p>
+						<input type="text" id="temp" value= ""> 
+						<span style = "font-size: 1rem">&#176;</span>
+					</p>
+
+					<button onclick="checkTemp()" id="myBtn">ENTER</button>
+
+					<p id= "result"></p>
+
+
+				</section>
+				
+				<section class="recent-posts-item">
+				 
+					<h3>Requirement 02</h3>
+					
+					<p>Enter a number between 1 & 12:</p>
+					
+					<p>
+						<input type="number" id="month_input"> 
+					</p>
+
+					<button onclick="checkMonth()" id="myBtn2">Check Month</button>
+
+					<p id= "month"></p>
+
+				
+				</section>
+				
+				<section class="recent-posts-item">
+				
+					<h3>Requirement 03</h3>
+
+					<p>Click button to see the season.</p>
+				
+					<button onclick="getSeason()">Check Season</button>
+
+					<p id="season"></p>
+				
+				</section>
+
+
+
+			</div>
+
+
+			<div class="recent-posts-list">
+
+				<section class="recent-posts-item">
+
+
+					<h3>Requirement 04</h3>
+
+					<button onclick="displayBirthMonth()">Display Names</button>
+					
+
+					<p id="names" style="font-size: 15px"></p>
+
+
+
+
+
+					<!-- <h3>Drop down stuff</h3>
+					
+					<p>Name Generator by month</p>
+					
+					<div class="dropdown">
+  						<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  						<div id="myDropdown" class="dropdown-content">
+	    					<a href="#home">Home</a>
+	    					<a href="#about">About</a>
+	    					<a href="#contact">Contact</a>
+  						</div>
+					</div>
+
+					
+
+					<p id= "result"></p>
+ -->
+
+				</section>
+				
+				<section class="recent-posts-item">
+				 
+					<h3>Requirement 05</h3>
+
+					<button onclick="displaySelectMonths()">Display Select</button>
+					
+
+					<h2 id="select"></h2>
+
+				
+				</section>
+				
+				<section class="recent-posts-item">
+				
+					<h3>Requirement 06</h3>
+
+					<p>Write this sentence:</p>
+					<h4 id="javaBold">Javascript makes me cry.</h4>
+					<input type="text" id="javaCry" value="">
+					<br>
+					<br>
+				
+					<button onclick="changejQueryMessage()">Click</button>
+
+					<p id="season"></p>
+				
+				</section>
+
+				
+
+			</div>
+
+			<div class="recent-posts-list">
+
+				<section class="recent-posts-item">
+
+					<h3>Requirement 07</h3>
+					
+					<p>Strict Mode Demonstration:</p>
+					
+					<p id= "error"></p>
+
+					<button onclick="strict()" id="myBtn">Click</button>
+
+					<p id= "result"></p>
+
+
+				</section>
+				
+				<section class="recent-posts-item">
+				 
+					<h3>Requirement 08</h3>
+					
+					<p>Ski Resorts - JSON</p>
+					
+					
+					<button onclick="displaySkiResorts()">Show Resorts</button>
+
+					<p id= "resort"></p>
+
+				
+				</section>
+				
+				<section class="recent-posts-item">
+				
+					<h3>Requirement 09</h3>
+					<p>Click to display player data.</p>
+					
+					
+					<br>
+				
+					<button onclick="initializePlayer()">Player Data</button>
+
+					<p id="player"></p>
+				
+				</section>
+
+				
+
+			</div>
+
+
+			<div class="recent-posts-list">
+
+				<section class="recent-posts-item">
+					
+					<h3>Requirement 10</h3>
+					
+					<p>Enter number & click to update your years in the league.</p>
+					<input type="number" id="update">
+					<br>
+					<br>
+				
+					<button onclick="changeYears()">Update Data</button>
+
+					<p id="year"></p>
+
+
+				</section>
+				
+				<section class="recent-posts-item">
+				 
+					<h3>Requirement 11</h3>
+					
+					<p>Enter team & click to update data.</p>
+					<input type="text" id="enterTeam">
+					<br>
+					<br>
+				
+					<button onclick="protoTeam()">Update Data</button>
+
+					<p id="team"></p>
+
+				
+				</section>
+				
+				<section class="recent-posts-item">
+				
+					
+				
+				</section>
+
+				
+
+			</div>
+
+		</section>
+
+	</main>
+
+	<footer>
+
+		<div class="copyright">
+			 &copy;River Camacho
+		</div>
+<!-- 
+		<form>
+			<input type="text">
+			<button>Subscribe</button>
+		</form> -->
+
+	</footer>
+	<script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

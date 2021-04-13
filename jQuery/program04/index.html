@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>Program04</title>
+	<link href="style.css" rel="stylesheet">
+	
+	<meta charset='utf-8'>
+
+</head>
+<body>
+
+	
+
+	<main>
+
+		<section class="hero">
+			<h1>ITSE 1394 - Jquery</h1>
+		</section>
+
+		<section class="recent-posts">
+
+			<h2>Program 04</h2>
+		
+			<div class="recent-posts-list">
+
+				<section class="recent-posts-item">
+
+					<h3>Requirement 01</h3>
+					
+					<p>Find the average:</p>
+					
+					<p>
+						<input type="number" id="num1" value= "">
+						<input type="number" id="num2" value= ""> 
+						<input type="number" id="num3" value= "">  
+						
+					</p>
+
+					<button onclick="getAverage()" id="myBtn">Find Average</button>
+
+					<br>
+					<br>
+
+
+					<h3 id= "result"></h3>
+
+
+				</section>
+				
+				<section class="recent-posts-item">
+				 
+					<h3>Requirement 02</h3>
+					
+					<p>Self Invoking Function</p>
+					
+
+					<br>
+
+					<p id= "self"></p>
+
+				
+				</section>
+				
+				<section class="recent-posts-item">
+				
+					<h3>Requirement 03</h3>
+
+					<p>Enter a name:</p>
+
+					<input type='text' id = 'name' value = "">
+
+					<br>
+					<br>
+				
+					<button onclick="closureExample()">Combine Names</button>
+
+					<p id="close"></p>
+				
+				</section>
+
+
+
+			</div>
+
+
+			<div class="recent-posts-list">
+					<section class="recent-posts-item">
+						
+
+						<h3 id="el1">Requirement 04</h3>
+
+						<button class="changeMyColor" onclick="colorChange()" id="el2">Change Colors</button>
+					
+
+						<p class="changeMyColor" id="colors">Hi</p>
+						
+					</section>
+				
+				<section class="recent-posts-item">
+				 <div id="alter">
+					<h3>Requirement 05</h3>
+					<p>Font Check<p>
+				</div>
+					<button onclick="fontSizeChange()" onclick="toggle()">Alter Fonts</button>
+
+				
+				</section>
+				
+				<section class="recent-posts-item">
+				
+					<h3>Requirement 06</h3>
+
+					<p>Hover over pic to display a different image</p>
+					
+					<img
+
+					src="https://i.ytimg.com/vi/GJdwEr9217A/maxresdefault.jpg" 
+					
+					onmouseover=
+					"this.src='https://magazine.columbia.edu/sites/default/files/styles/full_width_card/public/2018-09/Wild-fires.jpg?itok=8pfGkL7z'" 
+					
+					id=
+					"green" 
+					
+					onmouseout=
+					"this.src='https://i.ytimg.com/vi/GJdwEr9217A/maxresdefault.jpg'"
+					>
+					
+				</section>
+
+				
+
+			</div>
+
+			<div class="recent-posts-list">
+
+				<section class="recent-posts-item">
+
+					<h3>Requirement 07</h3>
+					
+					<p>Click the text to see it react</p>
+					
+					<p 
+					
+					id="changeColorText" 
+					onmousedown="mouseDown()"
+					onmouseup="mouseUp()">
+					
+					Lorem ipsum, dolor sit amet consectetur adipisicing, elit. Tenetur excepturi ea placeat labore, reiciendis fugit magni hic! Autem eius sit beatae tempora unde debitis animi hic amet perspiciatis optio. Assumenda.
+					
+					</p>
+
+	
+				</section>
+				
+				<section class="recent-posts-item">
+				 
+					<h3>Requirement 08</h3>
+				
+					<button id="myB">Produce Alert</button>
+
+					
+
+				
+				</section>
+				
+				<section class="recent-posts-item">
+				
+					<h3>Requirement 09</h3>
+					<p>Write all HTML content to an alert.</p>
+					
+					
+					<br>
+				
+					<button onclick="domContent()">Write Data</button>
+
+					
+				
+				</section>
+
+				
+
+			</div>
+
+
+			<div class="recent-posts-list">
+
+				<section class="recent-posts-item">
+					
+
+					<h3>Requirement 10</h3>
+					
+					<p>Click the button to demonstrate node stuff.</p>
+					
+				
+					<button onclick="changeContent()">Change Content</button>
+
+					<p id="pcon">Node</p>
+
+					<h1 id="content"></h1>
+
+
+				</section>
+				
+				<section class="recent-posts-item">
+				 
+					<h3>Requirement 11</h3>
+
+					<p>Click to create P element and then append it to the div.</p>
+					
+					<div id="div">
+						The pre existing sentence
+					</div>
+
+					<button onclick="createNode()">Click away</button>
+				
+				</section>
+				
+				<section class="recent-posts-item">
+				
+				<h3>Requirment 12</h3>
+
+				<p>Click this button to remove the elements that were added.</p>
+
+				<button onclick="removeNode()">Remove Element</button>
+					
+				
+				</section>
+
+				
+
+			</div>
+			<div class="recent-posts-list">
+
+				<section class="recent-posts-item">
+					
+
+					<h3>Requirement 13</h3>
+					
+					<p>Click the button to change background color of all elements in list.</p>
+					
+				
+					<button onclick="changeNodeList()">Change Colors</button>
+					<br>
+					<br>
+			
+						<ul id= "app">
+							<li>Apples</li>
+							<li>Bannanas</li>
+							<li>Oranges</li>
+							<li>Grapes</li>
+						</ul>
+
+					
+
+
+				</section>
+				
+				<section class="recent-posts-item">
+				 
+					
+				
+				</section>
+				
+				<section class="recent-posts-item">
+				
+			
+				
+				</section>
+
+				
+
+			</div>
+
+		</section>
+
+	</main>
+
+	<footer>
+
+		<div class="copyright">
+			 &copy;River Camacho
+		</div>
+<!-- 
+		<form>
+			<input type="text">
+			<button>Subscribe</button>
+		</form> -->
+
+	</footer>
+	<script src="script.js" type="text/javascript"></script>
+</body>
+
+</html>

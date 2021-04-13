@@ -1,0 +1,84 @@
+header{
+	display: flex;
+	align-items: center;
+}
+
+li{
+	display:inline;
+}
+
+h3.logo{
+    display: flex;
+    justify-content: flex-start;
+	margin-right: auto;
+    font-family: 'Kaushan Script', cursive;
+    color: #cc0099;
+}
+
+
+button {
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border-color: white;
+    outline: none;
+}
+#redBut {
+    padding: 20px;
+}
+#greenBut {
+    padding: 20px;
+}
+#blueBut {
+    padding: 20px;
+}
+header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+table {
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 20%;
+  }
+  
+  td, th {
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+  }
+ 
+  .image {
+    height: 300px;
+    width: 300px;
+    background-image: url("https://cdn1.vectorstock.com/i/1000x1000/34/05/sad-face-icon-unhappy-face-symbol-vector-23383405.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: red;
+    border-width: 10px;
+    
+      
+  }
+  nav a {
+    padding: 30px;
+    text-decoration: none;
+}
+a:visited {
+    color: none;
+}
+#changeFont {
+    border-color: green;
+    border-width: 10px;
+    background-color: yellow;
+}
+.change{
+    background-image: url("http://s3.amazonaws.com/production.mediajoint.prx.org/public/series_images/13024/fDCdb58_medium.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-color: green;  
+  }
+  .red {
+      background-image: url("https://i.ytimg.com/vi/r3MMA3gjNys/hqdefault.jpg");
+  }

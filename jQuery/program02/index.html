@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<title>Program 2</title>
+</head>
+<body>
+	<h1>ITSE 1394</h1>
+	<h2> River Camacho - Program 02 </h2>
+	<hr>
+	<h1> Requirement 01 </h1>
+	<div class="container">
+		<input type="button" value="Click to change color and text" id="change" onclick="change_text();" />
+
+	</div>
+	<script>
+		function change_text() {
+			document.getElementById('change').value = "Niiceee";
+			document.getElementById('change').style.background ='green';
+			document.getElementById('change').style.color = 'white';
+			document.getElementById('change').style.border = 'blue';
+			return false
+		}
+	</script>
+	<br>
+	<hr>
+
+	<h1> Requirement 02 </h1>
+	<div class="current_date">
+		<p id="date"></p>
+	  	<script>
+	  		n =  new Date();
+			y = n.getFullYear();
+			m = n.getMonth() + 1;
+			d = n.getDate();
+			h = n.getHours();
+			min = n.getMinutes();
+			document.getElementById("date").innerHTML = "Current Time & Date US Central:" + " " + m + "/" + d + "/" + y + " " + h + ":" + min + " " + "CST";
+		</script>
+	</div>
+
+	<br>
+	<hr>
+
+	<h1> Requirement 03 - 06</h1>
+	<br>
+
+	<h3>Get & Set Plane Data</h3>
+	
+	<br>
+
+	<br>
+
+	<div class="get_set">
+		<div>
+			<input type="text" id = "type_set" placeholder="Set type of plane" value="">
+			<button onclick="setType()">SET</button>
+		</div>
+		<div id="result">
+			Type
+		</div>
+		<div>
+			<input type="text" id = "type_get" placeholder="">
+			<button onclick="getType()">GET</button>
+		</div>
+	</div>
+		<br>
+		<div class="get_set">
+		<div>
+			<input type="text" id = "manu_set" placeholder="Set Manufacturer" value="">
+			<button onclick="setManufacturer()">SET</button>
+		</div>
+		<div id="manu">
+			Manufacturer
+		</div>
+		<div>
+			<input type="text" id = "manu_get" placeholder="">
+			<button onclick="getManufacturer()">GET</button>
+		</div>
+	</div>
+		<br>
+		<div class="get_set">
+			<div>
+				<input type="number" id = "pass_set" placeholder="Set max passengers" value="">
+				<button onclick="setMaxPass()">SET</button>
+			</div>
+		<div id="pass">
+			Type
+		</div>
+		<div>
+			<input type="number" id = "pass_get" placeholder="">
+			<button onclick="getMaxPass()">GET</button>
+		</div>
+	</div>
+	<br>
+	<div class="get_set">
+		<div>
+			<input type="number" id = "range_set" placeholder="Set max range" value="">
+			<button onclick="setMaxRange()">SET</button>
+		</div>
+		<div id="range">
+			Max Range
+		</div>
+		<div>
+			<input type="number" id = "range_get" placeholder="">
+			<button onclick="getMaxRange()">GET</button>
+		</div>
+	</div>
+	
+
+	<script>
+		function setType(){
+				var g = document.getElementById('result');
+				var h = document.getElementById('type_set').value;
+				g.innerHTML = h ;
+		}
+		function getType(){
+			var x = document.getElementById("type_set").value;
+			document.getElementById("type_get").placeholder = x;
+			}
+		function setManufacturer() {
+			var manu = document.getElementById('manu');
+			var manufac = document.getElementById('manu_set').value;
+			manu.innerHTML = manufac;
+		}
+		function getManufacturer() {
+			var m = document.getElementById('manu_set').value;
+			document.getElementById('manu_get').placeholder = m
+		}
+		function setMaxPass() {
+			var mp = document.getElementById('pass');
+			var p = document.getElementById('pass_set').value;
+			pass.innerHTML = p;
+		}
+		function getMaxPass() {
+			var gp = document.getElementById('pass_set').value;
+			document.getElementById('pass_get').placeholder = gp
+		}
+		function setMaxRange() {
+			var mr = document.getElementById('range');
+			var ra = document.getElementById('range_set').value;
+			range.innerHTML = ra;
+		}
+		function getMaxRange() {
+			var r = document.getElementById('range_set').value;
+			document.getElementById('range_get').placeholder = r
+		}
+	</script>
+
+
+	<br>
+
+
+	<p>Click the buttons to see the aircraft functions in action!</p> 
+
+
+	<br> 
+
+	<div class="container">
+
+
+	<input type = "button" onclick = "plane.takeOff()" value = "Take Off!">
+	<input type = "button" onclick = "plane.climb()" value = "Climb">
+	<input type = "button" onclick = "plane.descend()" value = "Descend">
+	<input type = "button" onclick = "plane.land()" value = "Land">
+
+
+	<br> 
+
+	<script>
+		var safeLanding = "safe landing"
+		class aircraft {
+			
+			takeOff() {
+				document.getElementById("demo").innerHTML = type_set.value + " " + manu_set.value + " " + "plane with" + " " + pass_set.value + " passengers has taken off succesfully!";
+			}
+			climb() {
+				document.getElementById("demo").innerHTML = type_set.value + " " + manu_set.value + " " + "plane is climbing altitude!";
+
+			}
+			descend(){
+				document.getElementById("demo").innerHTML = type_set.value + " " + manu_set.value + " " + "plane has reached the max range of" + " " + range_set.value + " " + "miles and is descending altitude!";
+
+			}
+			land(){
+				document.getElementById("demo").innerHTML = type_set.value + " " + manu_set.value + " " + "plane has had a" + " " + safeLanding;
+
+			}
+			
+
+		}
+		var plane = new aircraft("");
+			
+	</script>
+
+
+</div>
+
+<br>
+
+<p id="demo" style="font-size: 25px;" style="font-weight: bold;"></p>
+	
+
+
+	
+	<br>
+	<hr>
+
+	<h1> Requirement 07</h1>
+
+
+	<script>
+
+		function example() {
+
+			var str = document.getElementById('text1').value;
+			var str_lower = str.toLowerCase();
+			var word_find = "Purple";
+			var word_lower = word_find.toLowerCase();
+			var str_pos = str_lower.indexOf(word_lower)
+			if (str_pos > -1) {
+				var r = str.replace(/PURPLE/i, "yellow");
+				alert("Value inside the text box is: " + str);
+				alert("The new sentence is: " + r)
+			
+			} else {
+				alert("Please enter a sentence using the word Purple.")
+			}
+		}
+	</script>
+
+	<br>
+	<div class="text_box">
+	<input id="text1" placeholder="Write a sentence using the word purple" size="50">
+	
+	</div>
+	<br>
+	<div class="container">
+	<button onclick="example()" id = "btn1"> Submit </button>
+  	</div>
+	<br>
+	<hr>
+	<h1>Requirement 08</h1>
+	<script>
+	function round(){
+		var x = document.getElementById('user_num');
+		var y = "$" + Math.round(document.getElementById('number').value * 100) / 100;
+		x.innerHTML = y;
+		
+	}
+</script>
+	<div class="text_box">
+	<input id="number" placeholder="Enter number with more than 2 decimal places." value="" size="50">
+</div>
+<br>
+<div class="container">
+	<button onclick="round()" id = "btn"> Enter </button>
+</div>
+
+
+<p id = "user_num"></p>
+
+<br>
+<hr>
+
+<h1>Requirement 09</h1>
+<p>Enter two numbers then hit the button to see the remainder of dividing your numbers.</p>
+<br>
+<script>
+	function performModulus(){
+		var w = document.getElementById('num')
+		var x = document.getElementById('use_num').value;
+		var y = document.getElementById('use_num2').value;
+		var a = +x % +y;
+		w.innerHTML = "Remainder of" + " " + a;
+	}
+</script>
+<div class="text_box">
+	<input type="number" id="use_num" placeholder="Enter number." value="">
+	<input type="number" id="use_num2" placeholder="Enter number." value="">
+</div>
+<br>
+<div class="container">
+	<button onclick="performModulus()" id = "btn"> Perform Modulus </button>
+</div>
+
+<p id = "num"></p>
+<br>
+<hr>
+<h1>Requirement 10</h1>
+<p>Enter two sentences and press the button below to see them combined</p>
+<br>
+<script>
+	function stringConcat() {
+		var x = document.getElementById('concat');
+		var y = document.getElementById('user_str').value;
+		var z = document.getElementById('user_str1').value;
+		var a = y + " " + z;
+		x.innerHTML = a;
+	}
+</script>
+<div class= "text_box">
+	<input type="text" id="user_str" placeholder="Enter sentence" value=''>
+	<input type="text" id="user_str1" placeholder="Enter sentence"value=''>
+</div>
+<br>
+<div class="container">
+	<button onclick="stringConcat()" id = "btn"> Combine Strings </button>
+</div>
+<p id = "concat"></p>
+<br>
+<hr>
+<h1>Requirement 11</h1>
+<script>
+	function randomRun() {
+		var x = Math.floor(Math.random() * (76 - 24)) + 25;
+  		document.getElementById("rand").innerHTML = x;
+	}
+</script>
+<p>Click button below to generate random number between and including 25 - 75.
+<br>
+<br>
+<div class="container">
+	<button onclick="randomRun()" size="30"> Random Number Generator</button>
+</div>
+<p id="rand"></p>
+<br>
+<hr>
+<h1>Requirement 12</h1>
+<p>Click the button below to see what day of the week 01Jan2020 fell on.</p>
+<script>
+	function setMyDate() {
+		var mydate = new Date("January 01, 2020 00:00:00");
+		var day = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][mydate.getDay()];
+		var str = day;
+		document.getElementById('dat').innerHTML = str;
+	}
+	
+
+</script>
+
+<div class="container">
+	<button onclick="setMyDate()">Check the day</button>
+</div>
+<p id="dat"></p>
+
+<br>
+<hr>
+<h1>Requirement 13</h1>
+<p>Enter two strings and then click the button to see if the strings are equal.</p>
+<br>
+<script>
+	function compareStrings() {
+		
+		var y = document.getElementById('r').value;
+		var z = document.getElementById('c').value;
+		
+		var message;
+			
+			if (y.localeCompare(z) == 0 )  {
+				message = "These strings are equal"
+			} else {
+				message = "These strings are not equal"
+			}
+
+		document.getElementById('compy').innerHTML = message;
+	}
+</script>
+<div class= "text_box">
+	<input type="text" id="r" placeholder="Enter sentence" value="">
+	<input type="text" id="c" placeholder="Enter sentence"value="">
+</div>
+<br>
+<div class="container">
+	<button onclick="compareStrings()" id = "btn"> Compare Strings </button>
+</div>
+<p id = "compy"></p>
+<br>	
+<hr>
+
+<h1>Requirement 14</h1>
+
+<p id="l"></p>
+
+<p id="s"></p>
+
+<script>
+var large = 1.797693134862315E+308 
+var small = "-1.797693134862316E+308"
+
+
+document.getElementById("l").innerHTML = "The largest number before infinity is" + " " + large;
+document.getElementById("s").innerHTML = "The smallest number before infinity is" + " " + small;
+</script>
+
+</body>
+</html>
