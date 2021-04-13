@@ -1,0 +1,12 @@
+input {
+	display: block;
+	margin-bottom: 1rem;
+}
+select {
+	display: block;
+	margin-bottom: 1rem;
+}
+textarea {
+	display: block;
+	margin-bottom: 1rem;
+}

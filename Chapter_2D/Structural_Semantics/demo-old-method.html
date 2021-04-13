@@ -1,0 +1,61 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+	<title>HTML4 markup: the semantically neutral &lt;div&gt;</title>
+	<style type="text/css">
+		body {
+			font-family: Verdana, Geneva, sans-serif;
+			font-size: 12px;
+		}
+		h1, h2  {
+			margin: 0;
+		}
+		#header, #nav, #sidebar, .post, #footer {
+			background-color: #ccc;
+			padding: 15px;
+			margin-bottom: 20px;
+		}
+		#sidebar {
+			width: 200px;
+			float: right;
+			padding-bottom: 87px;
+		}
+		.post {
+			width: 320px;
+		}
+		#wrapper {
+			width: 600px;
+			margin-right: auto;
+			margin-left: auto;
+		}
+	</style>
+</head>
+
+<body>
+	<div id="wrapper">
+		<div id="header">
+			<h1>&lt;div id=&quot;header&quot;&gt;</h1>
+		</div>
+		
+		<div id="nav">
+			<h2>&lt;div id=&quot;nav&quot;&gt;</h2>
+		</div>
+		
+		<div id="sidebar">
+			<h2>&lt;div id="sidebar"&gt;</h2>
+		</div>
+		
+		<div class="post">
+			<h2>&lt;div class=&quot;post&quot;&gt;</h2>
+		</div>
+		<div class="post">
+			<h2>&lt;div class=&quot;post&quot;&gt;</h2>
+		</div>
+		
+		<div id="footer">
+			<h2>&lt;div id="footer"&gt;</h2>
+		</div>
+	</div>
+</body>
+</html>

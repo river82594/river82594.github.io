@@ -1,0 +1,263 @@
+body{
+	margin: 0;
+}
+html {
+	font-family: 'Helvetica Neue';
+}
+.hero{
+	background-image: url(images/hero-bg.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center;
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+header{
+	background-color: green;
+	display: flex;
+	justify-content: flex-end;
+	align-items: center;
+	background-color: #333333;
+}
+li{
+	display:inline;
+}
+.logo{
+	margin-right: auto;
+	padding-left: 2rem;
+    font-family: 'Kaushan Script', cursive;
+    color: #cc0099;
+}
+.title h2{
+	font-family: 'Kaushan Script', cursive;
+	color: #FFF;
+	text-align: center;
+	font-size: 3rem;
+	line-height: 5%;
+}
+
+.title h1{
+	font-family: 'Helvetica Neue';
+	color: #FFF;
+	text-align: center;
+	text-transform: uppercase;
+	font-size: 4rem;	
+
+}
+.title p{
+	font-family: 'Helvetica Neue';
+	color: #FFF;
+	text-align: center;
+	font-size: 1rem;
+	text-transform: uppercase;
+	background-color: #33ccff;
+	width: 11%;
+	padding: .75rem;
+	margin: auto;
+	box-sizing: border-box;
+	border: none;
+	border-radius: .3rem;
+}
+.title p a{
+	text-decoration: none;
+	color: #FFF;
+}
+.services {
+	margin-top: 4rem;
+	text-align: center;
+	font-family: 'Helvetica Neue';
+}
+.services h2 {
+	font-size: 2rem;
+	font-weight: normal;
+}
+.services h4 {
+	font-size: 1.5rem;
+	font-weight: normal;
+	color: grey;
+	line-height: 1rem;
+}
+
+.services p {
+	font-size: .9rem;
+}
+.posts p{
+	font-size: .9rem;
+	color: grey;
+}
+.posts{
+	padding: 2rem;
+	width: 20%;
+	display: flex;
+	justify-content: center;
+}
+.post_lists{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: center
+
+}
+
+
+.button{
+	display:flex;
+	justify-content: center;
+	justify-content: space-around;
+	text-transform: uppercase;
+	background-color: #b30047;
+	box-sizing: border-box;
+	border: none;
+	border-radius: .3rem;
+	width: 150px;
+	margin: auto;
+	color: white;
+}
+.button p {
+	font-size: 15px;
+}
+.button a {
+	text-decoration: none;
+	color: white;
+}
+
+nav a{
+	margin-right: 2rem;
+	text-decoration: none;
+	color: #FFF;
+}
+.portfolio {
+	background-color:#cccccc;
+	text-align: center;
+	padding-top: 4rem;
+}
+.portfolio h2 {
+	font-size: 2rem;
+	font-weight: normal;
+	line-height: 1rem;
+}
+.boxes {
+	background-color: white;
+	margin: 1.5% 1.5% 1.5% 1.5%;
+}
+.categories {
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+	justify-content: center;
+	padding-bottom: 5%;
+}
+
+
+@media (max-width: 500px) {
+
+	.title h1{
+		font-size: 3rem;
+		margin: 0 10% 5% 10%;
+	}
+	.title h2{
+		font-size: 2rem;
+		padding-bottom: 1rem;
+	}
+	.title p{
+		width: 40%;
+		font-size: 1rem;
+	}
+	header {
+		display: block;
+		padding: 2%;
+		font-size: 1.5rem;
+	}
+	li {
+		list-style-type: none;
+		display: block;
+		padding: 5% 1% 4% 1%;
+		font-size: 1rem;
+		border-bottom: 1px solid grey;
+	}
+	ul {
+		padding-left: 1%;
+		margin: 0 3% 8% 3%;
+	}
+	.logo {
+		padding-left: 3%;
+		padding-bottom: 0;
+	}
+	.posts{
+		width: 90%;
+		padding-bottom: 0;
+		margin: -10% 10% 20% 10%;
+	}
+	.portfolio h4{
+		color: grey;
+		font-size: 1.2rem;
+		margin: 0 20% 5% 20%;
+		font-weight: normal;
+		
+	}
+	.posts_list{
+		display: block;
+	}
+	.sub_title {
+		padding: 0 20% 10% 20%;
+	}
+	footer a {
+		display: flex;
+		flex-direction: column;
+		text-decoration: none;
+		color: #ff6699;
+	}
+	footer {
+		margin-left: 2rem;
+	}
+}
+@media (min-width: 936px) {
+
+	.title h1{
+		font-size: 3rem;
+		margin-bottom: 3rem;
+	}
+	.title h2{
+		font-size: 2rem;
+		padding-bottom: 1rem;
+	}
+	.title p{
+		width: 35%;
+		font-size: 1rem;
+	}
+	.portfolio h4{
+		color: grey;
+		font-size: 1.2rem;
+		margin: 0 20% 5% 20%;
+		font-weight: normal;
+	}
+	footer{
+		display: flex;
+		justify-content: flex-end;
+	}
+	footer p{
+		margin: 5% 54% 5% 0;
+	}
+	footer a{
+		margin-right:2.5%;
+		margin-top: 5%;
+		text-decoration: none;
+		color: #ff6699;
+	}
+}
+	@media (min-width: 1428px) {
+		
+		footer p{
+			margin: 3% 64% 3% 0;
+		}
+		footer a{
+			margin-top: 3%;
+		}
+
+}
+
+
+
+
