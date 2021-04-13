@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script>  
+    
+    <title>Program 11</title>
+</head>
+<script>
+    //R1
+    $(function () {
+        $( "#drag" ).draggable({
+            containment: "parent"
+        }); 
+    });
+
+    //R2
+    $(function () {
+        $( "#dragTwo" ).draggable({
+            containment: "parent",
+            axis: "x"
+        }); 
+    });
+
+    //R3
+
+
+    var timeleft = 10;
+    var downloadTimer = setInterval(function(){
+        if(timeleft <= 0){
+            clearInterval(downloadTimer);
+            document.getElementById("countdown").innerHTML = "Finished";
+            $(function () {
+                $( "#dragThree" ).draggable({
+                    disabled: true,
+                    containment: "parent"
+                }); 
+            });
+        } else {
+            document.getElementById("countdown").innerHTML = timeleft + " seconds remaining...";
+            $(function () {
+                $( "#dragThree" ).draggable({
+                    disabled: false,
+                    containment: "parent"
+                }); 
+            });
+        }
+        timeleft -= 1;
+        }, 1000);
+
+        //R4
+
+        $( function() {
+    $( "#someDivs" ).draggable();
+    $( "#someDivs2" ).droppable({
+        activeClass: "active",  
+        hoverClass:  "hover",
+        tolerance: "touch",
+        accept: "#someDivs",
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+  } );
+
+  $( function() {
+    $( "#someDivs3" ).draggable();
+    $( "#someDivs4" ).droppable({
+        activeClass: "active",  
+        hoverClass:  "hover",
+        tolerance: "fit",
+        accept: "#someDivs3",
+      drop: function( event, ui ) {
+        $( this )
+          .addClass( "ui-state-highlight" )
+          .find( "p" )
+            .html( "Dropped!" );
+      }
+    });
+  } );
+
+  //R5
+
+  $(function() {
+    $( "#resizable" ).resizable({
+        ghost: true
+    });
+  });
+
+//R6
+
+$(function() {
+    $( "#navElement" ).resizable({
+        containment: "#coloredSection",
+        minHeight: 70,
+        minWidth: 100
+    });
+  });
+
+  //R7
+  $(function() {
+      $("#letsMirror").resizable({
+          alsoResize: "#letsMirror2, #letsMirror3, #letsMirror4"
+      });
+  });
+//R8
+  $(function() {
+            $( "#selectSpecific" ).selectable({
+                filter : "li:first-child, li:last-child"
+                
+            });
+         });
+
+//R9
+    $(function(){
+        $("#sortPlace").sortable({
+            placeholder: "sortable-placeholder"
+        });
+    });
+</script>
+<body>
+
+<!-- R1 -->
+<h2>R1 - "Mom"</h2>
+<div id="mom">
+        <div id="drag" class="ui-widget-content">
+            <p>Click and hold to drag me around. Mom wont let me leave this box.<br>
+                :( </p>
+        </div>
+</div>
+
+<!-- R2 -->
+<h2>R2 - "Dad"</h2>
+<div id="dad">
+        <div id="dragTwo" class="ui-widget-content">
+            <p>Click and hold to drag me around. Dad wont let me leave the X axis.<br>
+                :( </p>
+        </div>
+        
+        <hr>
+        <p> Dad said no.</p>
+</div>
+
+  <!-- R3 -->
+<h2>R3 - QUICK DRAG THE BOX!!</h2>
+<div id="quickly">
+    <div id="countdown"></div>
+        <div id="dragThree" class="ui-widget-content">
+            <p>Go ahead and drag. But you only have 10 seconds! After you let go you will no longer be able to drag.<br>
+                :( </p>
+        </div>
+    </div>
+</div>
+
+<!-- R4 -->
+<h2>R2 - Droppable</h2>
+<table>
+    <tr>
+    <td><div id="someDivs" class="ui-widget-content"><p>L1</p></div></td>
+    <td>
+        <p>This one only need L1 to touch<br> it
+        to be considered dropped.</p>
+        <div id="someDivs2" class="ui-widget-header"><p style="text-align: center;">R1</p></div></td>
+    </tr>
+    <td><div id="someDivs3" class="ui-widget-content"><p>L2</p></div></td>
+    <td>
+        <p>This one needs L2 to be <br>dropped inside!</p>
+        <div id="someDivs4" class="ui-widget-header"><p style="text-align: center;">R2</p></div></td>
+    <tr>
+    </tr>
+   </table>
+
+<!-- R5 -->
+<br>
+<br>
+
+<h3> R5 - Create a resizeable article element with ghost option enabled</h3>
+
+    <article id="resizable">
+        <h3 class="ui-widget-header">Resizable</h3>
+    </article>
+
+
+
+<!-- R6 -->
+<br>
+<br>
+
+<br>
+<br>
+
+<h3>R6 - Demonstrate containment, minheight, minWidth on a nav element within a section element</h3>
+
+<section id="coloredSection">
+    <nav id="navElement">
+        <p class="ui-widget-header">Resize contained to this container</p>
+    </nav>
+</section>
+
+<!-- R7 -->
+<br>
+<h3>R7 - If one div is resized then the other three are also resized</h3>
+<table>
+<td>
+<div id="letsMirror">BOX1</div>
+</td>
+<td>
+<div id="letsMirror2">BOX2</div>
+</td>
+<td>
+<div id="letsMirror3">BOX3</div>
+</td>
+<td>
+<div id="letsMirror4">BOX4</div>
+</td>
+</table>
+<!-- R8 -->
+<br>
+<br>
+
+<h3>R8 - Use selectable methong along with filter option to ensure only
+the <span style="color: red;">first</span> and <span style="color: red;">last</span> elements of the list are selectable.</h3>
+<ol id="selectSpecific">
+    <li class = "ui-widget-content">First</li>
+    <li class = "ui-widget-content">Second</li>
+    <li class = "ui-widget-content">Third</li>
+    <li class = "ui-widget-content">Fourth</li>
+    <li class = "ui-widget-content">Fifth</li>
+    <li class = "ui-widget-content">Sixth</li>
+    <li class = "ui-widget-content">Last</li>
+</ol>
+
+<!-- R9 -->
+<br>
+<h3>R9 - Use the sortable method and the placeholder option to make the list <span style="color: red;">sortable</span>.
+Meaning the user can <span style="color: red;">rearrange</span> the items.</h3>
+<ol id="sortPlace">
+    <li class = "ui-widget-content">First</li>
+    <li class = "ui-widget-content">Second</li>
+    <li class = "ui-widget-content">Third</li>
+    <li class = "ui-widget-content">Fourth</li>
+    <li class = "ui-widget-content">Fifth</li>
+    <li class = "ui-widget-content">Sixth</li>
+    <li class = "ui-widget-content">Last</li>
+</ol>
+</body>
+</html>

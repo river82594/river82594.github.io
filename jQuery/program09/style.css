@@ -1,0 +1,74 @@
+
+nav{
+	display: flex;
+	align-items: center;
+}
+li{
+	display:inline;
+}
+h3.logo{
+    display: flex;
+    justify-content: flex-start;
+	margin-right: auto;
+    font-family: 'Kaushan Script', cursive;
+    color: #cc0099;
+    padding: 30px;
+}
+header {
+    text-align: center;
+    border-style: solid;
+    border-color: lightgrey;
+}
+header p {
+    font-size: 3rem;
+    padding-bottom: 30px;
+    font-family: 'Kaushan Script', cursive;
+    color: #cc0099;
+    border-style: solid;
+    border-color: lightgrey;
+
+}
+nav a {
+    padding: 30px;
+    text-decoration: none;
+    border-style: solid;
+    border-color: lightgrey;
+}
+header img {
+    border-style: solid;
+    border-color: lightgrey;
+}
+footer {
+    border-style: solid;
+    border-color: lightgrey;
+}
+section {
+    border-style: solid;
+    border-color: lightgrey;
+}
+article {
+    border-style: solid;
+    border-color: lightgrey;
+}
+#a {
+    border: 2px solid lightgrey;
+}
+
+#c {
+    border: 2px solid lightgrey;
+}
+.blueBorder {
+    border: 2px solid blue;
+}
+.redBorder {
+    border: 2px solid red;
+}
+.blackBorder {
+    border: 5px solid black;
+}
+.purpBorder {
+    border: 5px solid #90F;
+}
+.greenBorder {
+    border: 5px solid #3c3;
+}

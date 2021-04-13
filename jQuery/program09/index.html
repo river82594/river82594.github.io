@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <title>Program 09</title>
+</head>
+
+<header>
+    
+    <nav>
+        <img src="https://conceptdraw.com/a155c4/p60/preview/640/pict--code-cloud-round-icons-vector-stencils-library" width="100px" height="100px">Img element
+        <h3 class="logo">ITSE 1394 Jquery</h3>
+        <div id="a">Div element</div>
+        <ul>
+            Nav elements
+            <li><a id="one" href="#">Home</a></li>
+            <li><a id="two" href="#">Portfolio</a></li>
+            <li><a id="three" href="#">About</a></li>
+            <li><a id="four" href="#">Contact</a></li>
+        </ul>
+    </nav>
+<p>Hey welcome to program 09(p element)</p>
+<p>Sibiling</p>
+
+
+
+</header>
+
+<button id="parental">Identify Parents</button>
+<button id="ancestor">Identify All Ancestors</button>
+<button id="child">Identify Children</button>
+<button id="descend">Identify Descendants</button>
+<button id="sibiling">Identify Sibilings</button>
+<br>
+<br>
+<section>
+    Section
+    <hr>
+    <div id="b">Some text</div>
+</section>
+<br>
+<br>
+<article>
+    Article
+    <hr>
+    <div id="c">Div element</div>
+    <p>Some children text</p>
+</article>
+<footer>
+<p>Here is the footer element *R1</p>
+
+
+</footer>
+
+<script>
+
+//R2
+$("#parental").click(function(){
+    if ($("p").parent().hasClass("blueBorder") && $("div").parent().hasClass("blueBorder") ){
+    $("p").parent().removeClass("blueBorder");
+    $("div").parent().removeClass("blueBorder");
+    } else {
+        $("p").parent().addClass("blueBorder");
+        $("div").parent().addClass("blueBorder");
+    };
+});
+//R3
+
+$("#ancestor").click(function() {
+    if ($("#a").parents().hasClass("redBorder")) {
+        $("#a").parents().removeClass("redBorder");
+    }else{
+        $("#a").parents().addClass("redBorder");
+    }
+});
+
+//R4
+
+$("#child").click(function() {     
+    if ($("nav").children().hasClass("blackBorder") && $("article").children().hasClass("blackBorder")) {
+        $("nav").children().removeClass("blackBorder");
+        $("article").children().removeClass("blackBorder");
+    }else{
+        $("nav").children().addClass("blackBorder");
+        $("article").children().addClass("blackBorder");
+    };
+});
+
+//R5
+
+$("#descend").click(function() {     
+    if ($("section").find("div").hasClass("purpBorder")) {
+        $("section").find("div").removeClass("purpBorder");
+        
+    }else{
+        $("section").find("div").addClass("purpBorder");
+        
+    };
+});
+
+//R6
+
+$("#sibiling").click(function() {
+    if ($("header").children().siblings("p").hasClass("greenBorder")) {
+        $("header").children().siblings("p").removeClass("greenBorder");
+        console.log("hey now")
+    }else{
+        $("header").children().siblings("p").addClass("greenBorder");
+        console.log("now")
+    };
+});
+
+
+</script>

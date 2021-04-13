@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+      <title>Program 12</title>
+</head>
+<body>
+
+<script>
+    //R1
+    $( function() {
+      $( "#accordion" ).accordion({
+          heightStyle: "content",
+          collapsible: true
+      });
+    } );
+
+    //R2
+    $( function() {
+    var daysOfWeek = [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday",
+      "Saturday",
+      "Sunday"
+    ];
+    $( "#tags" ).autocomplete({
+      source: daysOfWeek
+    });
+  } );
+
+  //R3
+  $(function() {
+      $("#simp").button();
+  })
+  $( function() {
+    $( ".widget a, .widget button" ).button();
+    $( "button, a" ).click( function( event ) {
+      event.preventDefault();
+    } );
+  } );
+  $(function() {
+  $('#togg').click(function() {
+    $(this).toggleClass("down");
+  });
+});
+$(function() { 
+$( "#radio" ).buttonset();
+});
+
+//R4
+$(function() { 
+$("#datepicker").datepicker({
+    showOn: "button",
+      buttonImage: "http://jqueryui.com/resources/demos/datepicker/images/calendar.gif",
+      buttonImageOnly: true,
+      buttonText: "Select date",
+    beforeShowDay: function(date) {
+        var day = date.getDay();
+        return [(day != 6 && day != 0), ''];
+    }
+});
+});
+
+//R5
+$(function() { 
+$( "#dialog" ).dialog({
+     autoOpen: false,
+    buttons: {
+        SUBMIT: function() {
+            $(this).dialog( "close" );
+        }
+    },
+    beforeClose: function( event, ui ) {
+        if ( !$( "#checkbox-1").prop( "checked") && !$( "#checkbox-2").prop( "checked") ) {
+            event.preventDefault();
+            $( "#yesOrNo" ).addClass( "invalid");
+        }
+    }
+});
+$( "#opener" ).click(function() {
+    $( "#dialog" ).dialog( "open" );
+    });
+});
+
+//R6
+$( function() {
+    $( "#menu" ).menu();
+});
+
+</script>
+<div class="requirements">
+    <h1>Program 12</h1>
+    <div class="threeSections">
+        <div class="sectionItem">
+            <h2>R1 - Accordion</h2>
+            <hr>
+            <div id="accordion">
+                
+                <h3>United States</h3>
+                <div> 
+                    <p>
+                        This is america 
+                    </p>
+                </div>
+                
+                <h3>Saudi Arabia</h3>
+                <div>
+                    <p>
+                        This is Saudi Arabia
+                    </p>
+                </div>
+                
+                <h3>United Kingdom</h3>
+                <div>
+                    <p>
+                        This is the UK
+                    </p>
+                </div>
+                
+                <h3>Russia</h3>
+                <div>
+                    <p>
+                        This is Russia
+                    </p>
+                </div>
+            </div>
+        </div>
+        
+        <div class="sectionItem">
+            <h2>R2 - Autocomplete</h2>
+            <hr>
+            <p style="padding: 50px 20px 50px 20px; background-color: rgb(65, 65, 65);"><b>Start typing a day of the week to see the<br>
+                 autocomplete feature in action.</b></p>
+            <div class="ui-widget">
+                <label for="tags">Days of the Week: </label>
+                <input id="tags">
+            </div>
+        </div>
+        
+        <div class="sectionItem">
+            <h2>R3 - Button Widgets</h2>
+            <hr>
+            <div class="widget" id="buttonW">
+                <button id="simp">Simple Button</button>
+                <br>
+                <button id="togg"><span class="ui-icon ui-icon-power"></span></button>
+                <br>
+                <a href="#">An anchor</a>
+                <br>
+                <form>
+                    <fieldset>
+                      <legend>Buttonset</legend>
+                      <div id="radio">
+                        <input type="radio" id="option1" name="project">
+                        <label for="option1">Option 1</label>
+
+                        <input type="radio" id="option2" name="project" checked="checked">
+                        <label for="option2">Option 2</label>
+                   
+                        <input type="radio" id="option3" name="project">
+                        <label for="option3">Option 3</label>
+                      </div>
+                    </fieldset>
+                  </form>
+              </div>
+        </div>
+    
+    </div>
+
+    <div class="threeSections">
+        <div class="sectionItem">
+            <h2>R4 - Datepicker</h2>
+            <div style="padding-top: 60px;">
+                <p>Date: <input style="width: 120px; margin-right: 10px;" type="text" id="datepicker"></p>
+            </div>
+        </div>
+        
+        <div class="sectionItem">
+            <h2>R5 - Dialog</h2>
+            <button id="opener">open the dialog</button>
+            <div id="dialog" title="Question of the Year" style="width: 10px;">
+                <p>Are you the professor?</p>
+                <fieldset>
+                    <legend id="yesOrNo">Yes or No?: </legend>
+                    <label for="checkbox-1">Yes</label>
+                    <input type="checkbox" name="checkbox-1" id="checkbox-1">
+                    <label for="checkbox-2">No</label>
+                    <input type="checkbox" name="checkbox-2" id="checkbox-2">
+                  </fieldset>
+              </div>
+        </div>
+        
+        <div class="sectionItem">
+            <h2>R6 - Menu Widget</h2>
+            <ul id="menu">
+                <li>
+                  <div><span class="ui-icon ui-icon-disk"></span>Save</div>
+                </li>
+                <li>
+                  <div><span class="ui-icon ui-icon-mail-open"></span>Mail</div>
+                </li>
+                <li>
+                  <div><span class="ui-icon ui-icon-folder-collapsed"></span>Folder</div>
+                  <ul>
+                    <li>
+                      <div><span class="ui-icon ui-icon-home"></span>Home</div>
+                    </li>
+                    <li>
+                      <div><span class="ui-icon ui-icon-wrench"></span>Repair</div>
+                    </li>
+                    <li>
+                      <div><span class="ui-icon ui-icon-signal"></span>Network</div>
+                    </li>
+                  </ul>
+                </li>
+                <li>
+                  <div><span class="ui-icon ui-icon-pencil"></span>Edit</div>
+                </li>
+                <li>
+                  <div><span class="ui-icon ui-icon-gear"></span>Settings</div>
+                </li>
+                <li>
+                    <div><span class="ui-icon ui-icon-cancel"></span>Cancel</div>
+                  </li>
+                  <li>
+                    <div><span class="ui-icon ui-icon-trash"></span>Move to Trash</div>
+                  </li>
+              </ul>
+               
+        </div>
+    
+    </div>
+
+</div>
+
+
+</body>
+<footer style="font-size: 3rem; background-color: black; color: white;">&copy; River Camacho<br>
+<p style="font-size: 1rem;">Last Edit: 11/22/20</p>
+</footer>
+</html>

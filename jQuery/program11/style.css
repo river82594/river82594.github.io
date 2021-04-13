@@ -1,0 +1,198 @@
+#drag { 
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+#mom {
+    width: 500px; 
+    height: 500px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: red;
+    border-width: 4px;
+
+}
+#dragTwo { 
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+#dad {
+    width: 500px; 
+    height: 300px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: red;
+    border-width: 4px;
+}
+#dragThree { 
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: black;
+    border-width: 2px;
+}
+#countdown {
+    font-size: 30px;
+    color: red;
+}
+#quickly {
+    width: 500px; 
+    height: 300px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: red;
+    border-width: 4px;
+}
+#someDivs {
+    width: 100px; 
+    height: 100px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: red;
+    border-width: 4px;
+}
+#someDivs2 {
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: red;
+    border-width: 4px; 
+}
+#someDivs3 {
+    width: 100px; 
+    height: 100px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: red;
+    border-width: 4px;
+}
+#someDivs4 {
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: red;
+    border-width: 4px; 
+}
+
+.ui-widget-header {
+    background: lightgrey;
+}
+
+.active {  
+    border-color : red;  
+    background : rgba(111, 0, 0, 0.789);  
+    }    
+ .hover {  
+    border-color : black;  
+    background : yellow;  
+ }
+ #resizable { 
+     width: 150px; 
+     height: 150px; 
+     padding: 0.5em;
+     border-style: solid;
+     border-color: green;
+     }
+  #resizable h3 { 
+      text-align: center; 
+      margin: 0; 
+    }  
+article {
+    display: block;
+}
+#coloredSection {
+    border-style: solid;
+     border-color: green;
+     height: 100%;
+     width: 50%;
+}
+#navElement {
+    background-position: top left;
+    width: 150px;
+    height: 150px;
+    border-style: solid;
+     border-color: red;
+
+}
+#getInline {
+    display: block;
+}
+#letsMirror {
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: red;
+    border-width: 4px; 
+}
+#letsMirror2 {
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: green;
+    border-width: 4px; 
+}
+#letsMirror3 {
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: blue;
+    border-width: 4px; 
+}
+#letsMirror4 {
+    width: 150px; 
+    height: 150px; 
+    padding: 0.5em; 
+    border-style: solid;
+    border-color: rgb(255, 132, 0);
+    border-width: 4px; 
+}
+#selectSpecific li {
+    margin: 3px;
+    padding: 0.4em;
+    font-size: 16px;
+    height: 18px;
+    border: 3px solid black;
+    color: #333333;
+}
+#selectSpecific {
+    background: lightgrey;
+    width: 20%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#selectSpecific .ui-selected {
+    background: orange;
+}
+#selectSpecific .ui-selecting {
+    background: green;
+}
+#sortPlace {
+    background: lightgrey;
+    width: 20%;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+#sortPlace li{
+    margin: 3px;
+    padding: 0.4em;
+    font-size: 16px;
+    height: 18px;
+    border: 3px solid black;
+    color: #333333;
+}
+
