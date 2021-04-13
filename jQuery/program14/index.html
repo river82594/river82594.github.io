@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="style.css" rel="stylesheet">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link href="jquery-ui-1.12.1.custom/jquery-ui.css" rel="stylesheet">  
+      <script src="http://code.jquery.com/jquery-1.10.2.js"></script>  
+      <script src="http://code.jquery.com/ui/1.10.4/jquery-ui.js"></script> 
+      <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+  <link rel="stylesheet" href="/resources/demos/style.css">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+  <script src="globalize.js"></script>
+   
+  
+      <title>Program 14</title>
+</head>
+<body class="testClass2">
+  <br>
+<header>
+  
+</header>
+<script>
+    //R1
+    $(function() {
+      $("#addClass").click(function(){
+        $("header").addClass("changeBackColor");
+        $("header").addClass("changeBorder");
+        $("header").addClass("headerExpand");
+      });
+      $("#removeClass").click(function(){
+        $("header").removeClass("changeBackColor");
+        $("header").removeClass("changeBorder");
+        $("header").removeClass("headerExpand");
+      });
+
+    });
+
+
+  //R2
+$(function() {
+ $( "#animate" ).click(function() {
+  $( "#animate" ).animate({
+    backgroundColor: "#0FF"
+  });
+});
+});
+
+
+
+//R4
+
+$(function() {
+      $("#changeBackground").click(function(){
+        $("body").addClass("changeBack");
+      });
+
+      $("#removeBackground").click(function(){
+        $("body").removeClass("changeBack");
+      });
+
+});
+
+
+//R5
+
+$(function() {
+      $("#switchBackground").on ("click", function() {
+        $(".testClass2").switchClass("testClass2", "changeBack", 2000, "easeInSine");
+        $(".changeBack").switchClass("changeBack", "testClass2", 2000, "easeInSine");
+        return false;
+      });
+});
+
+
+//R6
+
+$(function() {
+  $("#blindButton").click(function() {
+    $("#blind").hide("blind");
+  });
+});
+$(function() {
+  $("#clipButton").click(function() {
+    $("#clip").toggle("clip");
+  });
+});
+$(function() {
+  $("#dropButton").click(function() {
+    $("#drop").show("drop");
+  });
+});
+$(function() {
+  $("#explodeButton").click(function() {
+    $("#explode").toggle("explode");
+  });
+});
+$(function() {
+  $("#foldButton").click(function() {
+    $("#fold").toggle("fold");
+  });
+});
+$(function() {
+  $("#puffButton").click(function() {
+    $("#puff").show("puff");
+  });
+});
+$(function() {
+  $("#shakeButton").click(function() {
+    $("#shake").hide("shake");
+  });
+});
+$(function() {
+  $("#slideButton").click(function() {
+    $("#slide").toggle("slide");
+  });
+});
+
+
+//R7
+$(function() {
+      $("#toggleClass").click(function(){
+        $("body").toggleClass("changeBack");
+      });
+});
+
+</script>
+<div class="requirements">
+    <h1>Program 14</h1>
+    <div class="threeSections">
+        <div class="sectionItem">
+            <h2>R1 - Add/Remove Classes</h2>
+            <hr>
+            <button id="addClass">Add Class</button>
+            <br>
+            <button id="removeClass">Remove Class</button>
+            
+        </div>
+        
+        <div class="sectionItem">
+            <h2>R2 - Animate</h2>
+            <hr>
+            <p>Click the colored box to see the color animate.</p>
+            <div id="animate"></div>
+            
+        </div>
+        
+        <div class="sectionItem">
+            <h2>R3 - Effects</h2>
+            <hr>
+            <table>
+              <tr>
+                  <th>
+                    <div class="effect" id="blind">blind hide</div>
+                    <button id="blindButton">Hide Blind</button>
+                    <hr>
+                  </th>
+                  <th>
+                    <div class="effect" id="clip">clip</div>
+                    <button id="clipButton">Toggle Clip</button>
+                    <hr>
+                  </th>
+              </tr>
+              <tr>
+                  <th>
+                    <div class="effect" id="drop">drop show</div>
+                    <button id="dropButton">Show Drop</button>
+                    <hr> 
+                  </th>
+                  <th>
+                    <div class="effect" id="explode">explode</div>
+                    <button id="explodeButton">Toggle Explode</button>
+                    <hr>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <div class="effect" id="fold">fold</div>
+                    <button id="foldButton">Toggle Fold</button>
+                    <hr>
+                  </th>
+                  <th>
+                    <div class="effect" id="puff">puff show</div>
+                    <button id="puffButton">Show Puff</button>
+                    <hr>
+                  </th>
+                </tr>
+                <tr>
+                  <th>
+                    <div class="effect" id="shake">shake hide</div>
+                    <button id="shakeButton">Hide Shake</button>
+                    <hr>
+                  </th>
+                  <th>
+                    <div class="effect" id="slide">slide</div>
+                    <button id="slideButton">Toggle Slide</button>
+                    <hr>  
+                  </th>
+                </tr>           
+            </table>
+        </div>
+    
+    </div>
+
+    <div class="threeSections">
+        
+      <div class="sectionItem">
+        <h2>R4 - Change Background </h2>
+        <hr>
+        <button id="changeBackground">Add Background</button>
+        <button id="removeBackground">Remove Background</button>
+      </div>
+        
+
+        
+        <div class="sectionItem">
+            <h2>R5 - Switch Classes </h2>
+            <hr>
+            <button id="switchBackground">Switch Background</button>
+        </div>
+        <div class="sectionItem">
+          <h2>R7 - Toggle Background </h2>
+        <hr>
+        <button id="toggleClass">Toggle Background</button>
+      </div>
+      </div>
+    </div>
+        
+</body>
+<br>
+<footer style="font-size: 3rem; background-color: black; color: white;">&copy; River Camacho<br>
+<p style="font-size: 1rem;">Last Edit: 12/05/20</p>
+</footer>
+</html>

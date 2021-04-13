@@ -1,0 +1,90 @@
+html {
+    background-color: grey;
+}
+body {
+    background-color: aquamarine;
+}
+.requirements {
+    margin-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: black;
+	box-shadow: 5px 5px 20px white;
+}
+.requirements h1 {
+    color: rgb(255, 159, 74);
+    text-align: center;
+    padding-top: 10px;
+}
+.threeSections {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+h2 {
+    color: rgb(255, 155, 178);
+}
+.sectionItem {
+    color: white;
+    background-color: rgb(128, 128, 128);
+    padding: 20px;
+    margin-bottom: 60px;
+    width: 25%;
+    overflow: auto;
+    margin-top: 1rem;
+}
+
+
+button {
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    border-color: white;
+    outline: none;
+    margin: 10px;
+}
+ header {
+     background-color: #FFC;
+     height: 50px;
+     margin-left: auto;
+     margin-right: auto;
+     width: 50px;
+ }
+ .changeBackColor {
+     background-color: #F96;
+ }
+.changeBorder {
+    border: solid blue;
+    border-width: 20px;
+}
+
+.headerExpand {
+    width: 960px;
+}
+#animate {
+    background-color: #F0F;
+    width: auto;
+    height: 160px;
+    border: solid black;
+
+}
+.changeBack {
+    background-image: url("https://www.pcclean.io/wp-content/gallery/hexagon-hd-wallpapers/Hexagon-36.jpg");
+}
+.testClass {
+    background-color: green;
+}
+.testClass2 {
+    background-color: pink;
+}
+.effect {
+    width: 100px;
+    height: 100px;
+    background: #ccc;
+    border: 1px solid #000;
+}
+#drop {
+    display: none;
+}
+#puff {
+    display: none;
+}

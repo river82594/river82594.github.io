@@ -1,0 +1,49 @@
+
+.requirements {
+    margin-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: black;
+	box-shadow: 5px 5px 20px white;
+}
+.requirements h1 {
+    color: rgb(255, 159, 74);
+    text-align: center;
+    padding-top: 10px;
+}
+.threeSections {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+h2 {
+    color: rgb(255, 155, 178);
+}
+.sectionItem {
+    color: white;
+    background-color: rgb(128, 128, 128);
+    padding: 20px;
+    margin-bottom: 60px;
+    width: 25%;
+    height: 60vh;
+    margin-top: 1rem;
+}
+#progressbar {
+    margin-top: 70px;
+    color: Blue;
+    
+  }
+ 
+  .progress-label {
+    font-weight: bold;
+    text-shadow: 1px 1px 0 #fff;
+    
+  }
+#tabs {
+    width: 80%;
+    height: 50vh;
+    background-color: lightgrey;
+    margin: 15px;
+    
+
+}
+ 
