@@ -1,0 +1,178 @@
+
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	width: 100%;
+	background-color: #fff;
+	max-width: 1600px;
+	margin-left: auto;
+	margin-right: auto;
+}
+ul li {
+	padding: 1rem;
+	margin: .5rem 0;
+	display: inline-block;
+	
+}
+ul {
+	padding-left: 0;
+}
+nav a {
+	color: #FFF;
+	text-decoration: none;
+	font-family: 'Kaushan Script', cursive;
+font-family: 'Suez One', serif;
+}
+
+nav a:hover {
+	color: #4da6ff;
+}
+footer {
+	margin-top: 2rem;
+	font-size: .75rem;
+	border-top: 1px solid #ccc;
+}
+.list2 li img{
+	height: 300px;
+	width: 300px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+	opacity: 100;
+}
+a :hover {
+transform: translateY(-5px);
+opacity: 0;
+border: solid 5px #4da6ff;
+transition: .3s;
+}
+
+.heroImage {
+	background-image: url(images/amazingsky.jpg);
+	background-size: cover;
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: center;
+	height: 60vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.header {
+	text-align: center;
+}
+	
+.list3 li {
+	height: 100px;
+	width: 100px;
+	border-radius: 5px;
+	box-shadow: 5px 5px 20px 0px rgba(0,0,0,0.2);
+	background-color: rgb(245, 241, 27);
+}
+.list3 a {
+	color: black;
+	text-align: center;
+}
+.list3 {
+	text-align: center;
+}
+
+
+header {
+		background-color: rgb(26, 24, 24);
+		display: flex;
+		justify-content: flex-end;
+		align-items: center;
+		padding-left: 20px;
+		margin-top: -10px;
+		max-width: 1600px;
+		margin-left: auto;
+		margin-right: auto;
+}
+.logo img{
+	height: 60px;
+	width: 60px;
+}
+.logo {
+	margin-right: auto;
+}
+.wrapper{
+	max-width: 1200px;
+	margin-right: auto;
+}
+.header {
+	text-align: center;
+	margin-top: -40px;
+}
+html {
+ width: 100%;
+ background-color: rgb(26, 24, 24);
+ margin-left: auto;
+ margin-right: auto;
+}
+.header h1 {
+	font-family: 'Kaushan Script', cursive;
+font-family: 'Suez One', serif;
+	color: #fff;
+	font-size: 50px;
+}
+.header h2 {
+	color: #fff;
+	font-family: 'Kaushan Script', cursive;
+}
+.header p {
+	color: #fff;
+	font-size: 18px;
+	word-wrap: break-word;
+	width: 100%;
+	max-width: 600px;
+	margin-right: auto;
+	margin-left: auto;
+	margin-bottom: 50px;
+	margin-top: 50px;
+}
+.header a {
+	color: #fff;
+	text-decoration: none;
+}
+
+.CTAButton:hover a {
+		color: #4da6ff;
+}
+.CTAButton {
+	border-radius: 50px;
+	background-color: #4da6ff;
+	width: 100%;
+	padding: 10px;
+		font-family: "Montserrat";
+		font-size: 18px;
+		text-transform: uppercase;
+}
+.CTAButton a{
+	color: #fff;
+}
+.CTAButton:hover {
+	background-color: #fff;
+}
+
+main h1 {
+	font-family: 'Kaushan Script', cursive;
+font-family: 'Suez One', serif;
+color: black;
+padding: 10px;
+text-align: center;
+}
+main {
+	text-align: center;
+}
+
+.overlay {
+	position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  transition: .5s ease;
+  background-color: #008CBA;
+}
